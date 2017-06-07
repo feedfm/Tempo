@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		814B39C7A8EA789307A1816E /* libPods-Tempo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E539224C3BAB63419E986A /* libPods-Tempo.a */; };
+		A99CA7E41E455D7F0093FE4C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A99CA7E31E455D7F0093FE4C /* main.m */; };
+		A99CA7E71E455D7F0093FE4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A99CA7E61E455D7F0093FE4C /* AppDelegate.m */; };
+		A99CA7EA1E455D7F0093FE4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A99CA7E91E455D7F0093FE4C /* ViewController.m */; };
+		A99CA7ED1E455D7F0093FE4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99CA7EB1E455D7F0093FE4C /* Main.storyboard */; };
+		A99CA7EF1E455D7F0093FE4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A99CA7EE1E455D7F0093FE4C /* Assets.xcassets */; };
+		A99CA7F21E455D7F0093FE4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99CA7F01E455D7F0093FE4C /* LaunchScreen.storyboard */; };
+		A99CA7FD1E455D7F0093FE4C /* TempoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A99CA7FC1E455D7F0093FE4C /* TempoTests.m */; };
+		A99CA8081E455D7F0093FE4C /* TempoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A99CA8071E455D7F0093FE4C /* TempoUITests.m */; };
+		A9A9317D1EE72C32001C962C /* FMPlayerAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A9317C1EE72C32001C962C /* FMPlayerAssets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A99CA7F91E455D7F0093FE4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A99CA7D71E455D7F0093FE4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A99CA7DE1E455D7F0093FE4C;
+			remoteInfo = Tempo;
+		};
+		A99CA8041E455D7F0093FE4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A99CA7D71E455D7F0093FE4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A99CA7DE1E455D7F0093FE4C;
+			remoteInfo = Tempo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0255682C25583A8B66FD20D0 /* Pods-Tempo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tempo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tempo/Pods-Tempo.release.xcconfig"; sourceTree = "<group>"; };
+		6E7C7477D7D06DC8544D003B /* Pods-Tempo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tempo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tempo/Pods-Tempo.debug.xcconfig"; sourceTree = "<group>"; };
+		A2E539224C3BAB63419E986A /* libPods-Tempo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tempo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A99CA7DF1E455D7F0093FE4C /* Tempo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tempo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A99CA7E31E455D7F0093FE4C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A99CA7E51E455D7F0093FE4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A99CA7E61E455D7F0093FE4C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A99CA7E81E455D7F0093FE4C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A99CA7E91E455D7F0093FE4C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A99CA7EC1E455D7F0093FE4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A99CA7EE1E455D7F0093FE4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A99CA7F11E455D7F0093FE4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A99CA7F31E455D7F0093FE4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A99CA7F81E455D7F0093FE4C /* TempoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TempoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A99CA7FC1E455D7F0093FE4C /* TempoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TempoTests.m; sourceTree = "<group>"; };
+		A99CA7FE1E455D7F0093FE4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A99CA8031E455D7F0093FE4C /* TempoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TempoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A99CA8071E455D7F0093FE4C /* TempoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TempoUITests.m; sourceTree = "<group>"; };
+		A99CA8091E455D7F0093FE4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9A9317C1EE72C32001C962C /* FMPlayerAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FMPlayerAssets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A99CA7DC1E455D7F0093FE4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				814B39C7A8EA789307A1816E /* libPods-Tempo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A99CA7F51E455D7F0093FE4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A99CA8001E455D7F0093FE4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2180B09C31794AAC3B1BE83C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E7C7477D7D06DC8544D003B /* Pods-Tempo.debug.xcconfig */,
+				0255682C25583A8B66FD20D0 /* Pods-Tempo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3851F8C62FCA6E2C8B296FBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2E539224C3BAB63419E986A /* libPods-Tempo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A99CA7D61E455D7F0093FE4C = {
+			isa = PBXGroup;
+			children = (
+				A99CA7E11E455D7F0093FE4C /* Tempo */,
+				A99CA7FB1E455D7F0093FE4C /* TempoTests */,
+				A99CA8061E455D7F0093FE4C /* TempoUITests */,
+				A99CA7E01E455D7F0093FE4C /* Products */,
+				2180B09C31794AAC3B1BE83C /* Pods */,
+				3851F8C62FCA6E2C8B296FBF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A99CA7E01E455D7F0093FE4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A99CA7DF1E455D7F0093FE4C /* Tempo.app */,
+				A99CA7F81E455D7F0093FE4C /* TempoTests.xctest */,
+				A99CA8031E455D7F0093FE4C /* TempoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A99CA7E11E455D7F0093FE4C /* Tempo */ = {
+			isa = PBXGroup;
+			children = (
+				A99CA7E51E455D7F0093FE4C /* AppDelegate.h */,
+				A99CA7E61E455D7F0093FE4C /* AppDelegate.m */,
+				A99CA7E81E455D7F0093FE4C /* ViewController.h */,
+				A99CA7E91E455D7F0093FE4C /* ViewController.m */,
+				A99CA7EB1E455D7F0093FE4C /* Main.storyboard */,
+				A99CA7EE1E455D7F0093FE4C /* Assets.xcassets */,
+				A9A9317C1EE72C32001C962C /* FMPlayerAssets.xcassets */,
+				A99CA7F01E455D7F0093FE4C /* LaunchScreen.storyboard */,
+				A99CA7F31E455D7F0093FE4C /* Info.plist */,
+				A99CA7E21E455D7F0093FE4C /* Supporting Files */,
+			);
+			path = Tempo;
+			sourceTree = "<group>";
+		};
+		A99CA7E21E455D7F0093FE4C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A99CA7E31E455D7F0093FE4C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A99CA7FB1E455D7F0093FE4C /* TempoTests */ = {
+			isa = PBXGroup;
+			children = (
+				A99CA7FC1E455D7F0093FE4C /* TempoTests.m */,
+				A99CA7FE1E455D7F0093FE4C /* Info.plist */,
+			);
+			path = TempoTests;
+			sourceTree = "<group>";
+		};
+		A99CA8061E455D7F0093FE4C /* TempoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A99CA8071E455D7F0093FE4C /* TempoUITests.m */,
+				A99CA8091E455D7F0093FE4C /* Info.plist */,
+			);
+			path = TempoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A99CA7DE1E455D7F0093FE4C /* Tempo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A99CA80C1E455D7F0093FE4C /* Build configuration list for PBXNativeTarget "Tempo" */;
+			buildPhases = (
+				F0178725D5991CD66F0B3DE3 /* [CP] Check Pods Manifest.lock */,
+				A99CA7DB1E455D7F0093FE4C /* Sources */,
+				A99CA7DC1E455D7F0093FE4C /* Frameworks */,
+				A99CA7DD1E455D7F0093FE4C /* Resources */,
+				4A678B483AD18242E0444372 /* [CP] Embed Pods Frameworks */,
+				D96333F7DF60B0C8D7E360DA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tempo;
+			productName = Tempo;
+			productReference = A99CA7DF1E455D7F0093FE4C /* Tempo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A99CA7F71E455D7F0093FE4C /* TempoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A99CA80F1E455D7F0093FE4C /* Build configuration list for PBXNativeTarget "TempoTests" */;
+			buildPhases = (
+				A99CA7F41E455D7F0093FE4C /* Sources */,
+				A99CA7F51E455D7F0093FE4C /* Frameworks */,
+				A99CA7F61E455D7F0093FE4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A99CA7FA1E455D7F0093FE4C /* PBXTargetDependency */,
+			);
+			name = TempoTests;
+			productName = TempoTests;
+			productReference = A99CA7F81E455D7F0093FE4C /* TempoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A99CA8021E455D7F0093FE4C /* TempoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A99CA8121E455D7F0093FE4C /* Build configuration list for PBXNativeTarget "TempoUITests" */;
+			buildPhases = (
+				A99CA7FF1E455D7F0093FE4C /* Sources */,
+				A99CA8001E455D7F0093FE4C /* Frameworks */,
+				A99CA8011E455D7F0093FE4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A99CA8051E455D7F0093FE4C /* PBXTargetDependency */,
+			);
+			name = TempoUITests;
+			productName = TempoUITests;
+			productReference = A99CA8031E455D7F0093FE4C /* TempoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A99CA7D71E455D7F0093FE4C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Feed Media";
+				TargetAttributes = {
+					A99CA7DE1E455D7F0093FE4C = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = PAGEPFEF9A;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					A99CA7F71E455D7F0093FE4C = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A99CA7DE1E455D7F0093FE4C;
+					};
+					A99CA8021E455D7F0093FE4C = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A99CA7DE1E455D7F0093FE4C;
+					};
+				};
+			};
+			buildConfigurationList = A99CA7DA1E455D7F0093FE4C /* Build configuration list for PBXProject "Tempo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A99CA7D61E455D7F0093FE4C;
+			productRefGroup = A99CA7E01E455D7F0093FE4C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A99CA7DE1E455D7F0093FE4C /* Tempo */,
+				A99CA7F71E455D7F0093FE4C /* TempoTests */,
+				A99CA8021E455D7F0093FE4C /* TempoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A99CA7DD1E455D7F0093FE4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A99CA7F21E455D7F0093FE4C /* LaunchScreen.storyboard in Resources */,
+				A99CA7EF1E455D7F0093FE4C /* Assets.xcassets in Resources */,
+				A9A9317D1EE72C32001C962C /* FMPlayerAssets.xcassets in Resources */,
+				A99CA7ED1E455D7F0093FE4C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A99CA7F61E455D7F0093FE4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A99CA8011E455D7F0093FE4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A678B483AD18242E0444372 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tempo/Pods-Tempo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D96333F7DF60B0C8D7E360DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tempo/Pods-Tempo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0178725D5991CD66F0B3DE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A99CA7DB1E455D7F0093FE4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A99CA7EA1E455D7F0093FE4C /* ViewController.m in Sources */,
+				A99CA7E71E455D7F0093FE4C /* AppDelegate.m in Sources */,
+				A99CA7E41E455D7F0093FE4C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A99CA7F41E455D7F0093FE4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A99CA7FD1E455D7F0093FE4C /* TempoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A99CA7FF1E455D7F0093FE4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A99CA8081E455D7F0093FE4C /* TempoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A99CA7FA1E455D7F0093FE4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A99CA7DE1E455D7F0093FE4C /* Tempo */;
+			targetProxy = A99CA7F91E455D7F0093FE4C /* PBXContainerItemProxy */;
+		};
+		A99CA8051E455D7F0093FE4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A99CA7DE1E455D7F0093FE4C /* Tempo */;
+			targetProxy = A99CA8041E455D7F0093FE4C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A99CA7EB1E455D7F0093FE4C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A99CA7EC1E455D7F0093FE4C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A99CA7F01E455D7F0093FE4C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A99CA7F11E455D7F0093FE4C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A99CA80A1E455D7F0093FE4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A99CA80B1E455D7F0093FE4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A99CA80D1E455D7F0093FE4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E7C7477D7D06DC8544D003B /* Pods-Tempo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = PAGEPFEF9A;
+				INFOPLIST_FILE = Tempo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fm.feed.FeedTempo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A99CA80E1E455D7F0093FE4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0255682C25583A8B66FD20D0 /* Pods-Tempo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = PAGEPFEF9A;
+				INFOPLIST_FILE = Tempo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fm.feed.FeedTempo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A99CA8101E455D7F0093FE4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TempoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fm.feed.TempoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tempo.app/Tempo";
+			};
+			name = Debug;
+		};
+		A99CA8111E455D7F0093FE4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TempoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fm.feed.TempoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tempo.app/Tempo";
+			};
+			name = Release;
+		};
+		A99CA8131E455D7F0093FE4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TempoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fm.feed.TempoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Tempo;
+			};
+			name = Debug;
+		};
+		A99CA8141E455D7F0093FE4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TempoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = fm.feed.TempoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Tempo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A99CA7DA1E455D7F0093FE4C /* Build configuration list for PBXProject "Tempo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A99CA80A1E455D7F0093FE4C /* Debug */,
+				A99CA80B1E455D7F0093FE4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A99CA80C1E455D7F0093FE4C /* Build configuration list for PBXNativeTarget "Tempo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A99CA80D1E455D7F0093FE4C /* Debug */,
+				A99CA80E1E455D7F0093FE4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A99CA80F1E455D7F0093FE4C /* Build configuration list for PBXNativeTarget "TempoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A99CA8101E455D7F0093FE4C /* Debug */,
+				A99CA8111E455D7F0093FE4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A99CA8121E455D7F0093FE4C /* Build configuration list for PBXNativeTarget "TempoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A99CA8131E455D7F0093FE4C /* Debug */,
+				A99CA8141E455D7F0093FE4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A99CA7D71E455D7F0093FE4C /* Project object */;
+}

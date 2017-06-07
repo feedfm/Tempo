@@ -1,0 +1,9 @@
+build/
+DerivedData/
+xcuserdata/
+.idea/
+.DS_Store
+dist/*.framework
+dist/*.zip
+dist/*.a
+docs/

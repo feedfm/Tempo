@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkK-Ua-h45" customClass="FMPlayPauseButton">
+                                <rect key="frame" x="157" y="234" width="60" height="30"/>
+                                <state key="normal" title="warm up"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="stationName" value="warm up"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="crossfade" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideWhenStalled" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideWhenActive" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcU-qe-dgE" customClass="FMPlayPauseButton">
+                                <rect key="frame" x="141" y="304" width="92" height="30"/>
+                                <state key="normal" title="high intensity"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="stationName" value="high intensity"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="crossfade" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideWhenStalled" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideWhenActive" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sja-ak-fKy" customClass="FMPlayPauseButton">
+                                <rect key="frame" x="152" y="374" width="71" height="30"/>
+                                <state key="normal" title="cool down"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="stationName" value="cool down"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="crossfade" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideWhenStalled" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideWhenActive" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="DEN-4m-VUG" customClass="FMActivityIndicator">
+                                <rect key="frame" x="147.5" y="619" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="Y0Q-oD-2jG"/>
+                                    <constraint firstAttribute="height" constant="20" id="waC-z4-Qg6"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4u-wg-yfP" userLabel="play button" customClass="FMPlayPauseButton">
+                                <rect key="frame" x="147.5" y="619" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="Xaa-sj-rf7"/>
+                                    <constraint firstAttribute="height" constant="20" id="bzc-Qa-STB"/>
+                                </constraints>
+                                <state key="normal" image="feedfm-icon-play-black"/>
+                                <state key="selected" title="pause" image="feedfm-icon-pause-black"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideWhenStalled" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vP2-FA-GYe" userLabel="skip button" customClass="FMSkipButton">
+                                <rect key="frame" x="207.5" y="619" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="Dvr-ah-lWW"/>
+                                    <constraint firstAttribute="height" constant="20" id="LtV-Ih-6jY"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="feedfm-icon-skip-black"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Sja-ak-fKy" firstAttribute="top" secondItem="mcU-qe-dgE" secondAttribute="bottom" constant="40" id="6Nj-7F-UOQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DEN-4m-VUG" secondAttribute="bottom" constant="28" id="7i5-H8-Qfh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R4u-wg-yfP" secondAttribute="bottom" constant="28" id="Cya-jT-ICg"/>
+                            <constraint firstItem="DEN-4m-VUG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-30" id="D43-RL-yxp"/>
+                            <constraint firstItem="mcU-qe-dgE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KBU-D6-Zf8"/>
+                            <constraint firstItem="vP2-FA-GYe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="30" id="KnS-hJ-q7f"/>
+                            <constraint firstItem="mcU-qe-dgE" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" multiplier="2:4" id="Lzx-JX-ecj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vP2-FA-GYe" secondAttribute="bottom" constant="28" id="R3H-PT-GHi"/>
+                            <constraint firstItem="Sja-ak-fKy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aTa-7u-EPr"/>
+                            <constraint firstItem="ZkK-Ua-h45" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dIG-Ce-k88"/>
+                            <constraint firstItem="mcU-qe-dgE" firstAttribute="top" secondItem="ZkK-Ua-h45" secondAttribute="bottom" constant="40" id="eu5-1p-dM8"/>
+                            <constraint firstItem="R4u-wg-yfP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-30" id="nxp-H8-WNu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="coolDownButton" destination="Sja-ak-fKy" id="vNH-0Q-a7y"/>
+                        <outlet property="highIntensityButton" destination="mcU-qe-dgE" id="CQY-cp-76U"/>
+                        <outlet property="warmUpButton" destination="ZkK-Ua-h45" id="GF3-oY-ick"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="feedfm-icon-pause-black" width="16" height="16"/>
+        <image name="feedfm-icon-play-black" width="16" height="16"/>
+        <image name="feedfm-icon-skip-black" width="16" height="16"/>
+    </resources>
+</document>
