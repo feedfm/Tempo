@@ -232,7 +232,8 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
    of a voice saying the numbers 0 through 9
 
  To receive notice that music is available or not available, use the
- `whenAvailable:notAvailable:` method call:
+ `whenAvailable:notAvailable:` method call, which is guaranteed to call
+ only one of its arguments as soon as music is deemed available or not:
 
     FMAudioPlayer *player = [FMAudioPlayer sharedPlayer];
  
@@ -260,7 +261,8 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 
  Once you can play music, use the `play`, `pause`, `skip` methods to
  control playback. The `stationList` property will contain a list of
- stations the user can switch to with the the `setActiveStationByName:` call.
+ stations the user can switch to with the the `setActiveStationByName:` 
+ or `setActiveStation:` calls.
  
  The `FMAudioPlayer` registers with iOS so that
  playback can be paused, skipped, liked, and disliked via the lock screen.
@@ -320,6 +322,12 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 + (FMAudioPlayer *)sharedPlayer;
 
 /**
+ * Utility function to map state to string.
+ */
+
++ (NSString *) nameForType:(FMAudioPlayerPlaybackState)type;
+
+/**
  * Call one of the two callbacks as soon as we know if we pass geographic playback
  * restrictions and the feed.fm servers are reachable. One of these two blocks is
  * guaranteed to be called, and only one call will ever be made.
@@ -348,6 +356,11 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  * Starts retrieval and playback of music in the active station.
  */
 - (void)play;
+
+/**
+ * Start playback of specific song
+ */
+- (void)playAudioItem: (FMAudioItem *) audioItem;
 
 /**
  * Pauses music playback.
@@ -467,7 +480,6 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  *  @see activeStation
  */
 
-
 - (BOOL) setActiveStationByName: (NSString *)name withCrossfade: (BOOL) withCrossfade;
 
 /**
@@ -484,6 +496,16 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
  */
 
 - (void) setActiveStation: (FMStation *)station withCrossfade: (BOOL) withCrossfade;
+
+/**
+ * Search through the list of available stations, and return the one that has
+ * an option attribute named 'key' with a string value of 'value'.
+ *
+ * @param key name of attribute to inspect
+ * @param value attribute value that matching station should contain
+ */
+
+- (FMStation *) getStationWithOptionKey: (NSString *) key Value: (NSObject *) value;
 
 /**
  *  A value between 0.0 and 1.0 relative to system volume
@@ -570,11 +592,14 @@ typedef NS_ENUM(NSInteger, FMAudioPlayerPlaybackState) {
 @property (nonatomic) BOOL crossfadeInEnabled;
 
 /**
+ * @deprecated Clients should look for the FMAudioPlayerMusicQueuedNotification
+ * notification to know when music is queued up in the player, rather than
+ * rely on this property, which will be removed in the next major version.
+ *
  * Indicates if the SDK has retrieved the next song for playback from the
  * server and is ready to start playing it.
  */
-
-@property (nonatomic, readonly) BOOL isPreparedToPlay;
+@property (nonatomic, readonly) BOOL isPreparedToPlay DEPRECATED_ATTRIBUTE;
 
 /**
  * The currently playing or paused song, or null if there

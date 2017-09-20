@@ -1,1 +1,1 @@
-../../../FeedMedia/UI/FMPlayPauseButton.h
+../../../../../iOS-SDK-Core/FeedMedia/Sources/FMPlayPauseButton.h

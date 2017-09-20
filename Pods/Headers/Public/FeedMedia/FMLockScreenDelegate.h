@@ -1,1 +1,1 @@
-../../../FeedMedia/Core/FMLockScreenDelegate.h
+../../../../../iOS-SDK-Core/FeedMedia/Core/FMLockScreenDelegate.h

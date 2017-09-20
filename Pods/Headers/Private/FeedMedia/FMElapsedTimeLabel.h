@@ -1,1 +1,1 @@
-../../../FeedMedia/UI/FMElapsedTimeLabel.h
+../../../../../iOS-SDK-Core/FeedMedia/Sources/FMElapsedTimeLabel.h

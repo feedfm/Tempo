@@ -1,1 +1,1 @@
-../../../FeedMedia/UI/FMEqualizer.h
+../../../../../iOS-SDK-Core/FeedMedia/Sources/FMEqualizer.h

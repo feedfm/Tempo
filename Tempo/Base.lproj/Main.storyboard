@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,45 +22,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkK-Ua-h45" customClass="FMPlayPauseButton">
-                                <rect key="frame" x="157" y="234" width="60" height="30"/>
-                                <state key="normal" title="warm up"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="stationName" value="warm up"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="crossfade" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideWhenStalled" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideWhenActive" value="NO"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcU-qe-dgE" customClass="FMPlayPauseButton">
-                                <rect key="frame" x="141" y="304" width="92" height="30"/>
-                                <state key="normal" title="high intensity"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="stationName" value="high intensity"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="crossfade" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideWhenStalled" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideWhenActive" value="NO"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sja-ak-fKy" customClass="FMPlayPauseButton">
-                                <rect key="frame" x="152" y="374" width="71" height="30"/>
-                                <state key="normal" title="cool down"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="stationName" value="cool down"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="crossfade" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideWhenStalled" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hideWhenActive" value="NO"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="DEN-4m-VUG" customClass="FMActivityIndicator">
-                                <rect key="frame" x="147.5" y="619" width="20" height="20"/>
+                                <rect key="frame" x="148" y="619" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="Y0Q-oD-2jG"/>
                                     <constraint firstAttribute="height" constant="20" id="waC-z4-Qg6"/>
                                 </constraints>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4u-wg-yfP" userLabel="play button" customClass="FMPlayPauseButton">
-                                <rect key="frame" x="147.5" y="619" width="20" height="20"/>
+                                <rect key="frame" x="148" y="619" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="Xaa-sj-rf7"/>
                                     <constraint firstAttribute="height" constant="20" id="bzc-Qa-STB"/>
@@ -72,38 +42,103 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vP2-FA-GYe" userLabel="skip button" customClass="FMSkipButton">
-                                <rect key="frame" x="207.5" y="619" width="20" height="20"/>
+                                <rect key="frame" x="208" y="619" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="Dvr-ah-lWW"/>
                                     <constraint firstAttribute="height" constant="20" id="LtV-Ih-6jY"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="feedfm-icon-skip-black"/>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dBR-nE-VcA">
+                                <rect key="frame" x="132" y="124" width="111" height="346"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WL-Mk-rcc" userLabel="Metadata" customClass="FMMetadataLabel">
+                                <rect key="frame" x="16" y="578" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="format" value="%TRACK by %ARTIST on %ALBUM"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trailingBuffer">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crossfade time (seconds):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QE-Sr-sJK">
+                                <rect key="frame" x="24" y="40" width="201" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iLL-9M-osX" userLabel="FadeInToggle">
+                                <rect key="frame" x="302" y="78" width="51" height="31"/>
+                                <connections>
+                                    <action selector="fadeInShouldChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="JZ3-vP-9ls"/>
+                                </connections>
+                            </switch>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x4E-uz-5Ul" userLabel="CrossfadeSeconds">
+                                <rect key="frame" x="278" y="36" width="73" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="dEh-UA-XoM"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="crossfadeTimeShouldChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="8gK-Wj-auv"/>
+                                    <action selector="crossfadeTimeShouldChange:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="8nM-Xw-dNh"/>
+                                </connections>
+                            </textField>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="j41-xX-vuM" customClass="FMProgressView">
+                                <rect key="frame" x="16" y="568" width="343" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="OjN-f6-oRU"/>
+                                </constraints>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fade in next song:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nt9-4H-3Ep">
+                                <rect key="frame" x="24" y="83" width="139" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Sja-ak-fKy" firstAttribute="top" secondItem="mcU-qe-dgE" secondAttribute="bottom" constant="40" id="6Nj-7F-UOQ"/>
+                            <constraint firstItem="dBR-nE-VcA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="116" placeholder="YES" id="1A6-Wc-kQt"/>
+                            <constraint firstItem="dBR-nE-VcA" firstAttribute="top" secondItem="nt9-4H-3Ep" secondAttribute="bottom" constant="20" id="2dN-Jt-ibc"/>
+                            <constraint firstItem="nt9-4H-3Ep" firstAttribute="top" secondItem="6QE-Sr-sJK" secondAttribute="bottom" constant="22" id="4fh-N8-TwQ"/>
+                            <constraint firstItem="2WL-Mk-rcc" firstAttribute="top" secondItem="j41-xX-vuM" secondAttribute="bottom" constant="8" id="5Xg-zB-BYX"/>
+                            <constraint firstItem="vP2-FA-GYe" firstAttribute="top" secondItem="2WL-Mk-rcc" secondAttribute="bottom" constant="20" id="631-pD-fxl"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DEN-4m-VUG" secondAttribute="bottom" constant="28" id="7i5-H8-Qfh"/>
+                            <constraint firstItem="6QE-Sr-sJK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="AJj-0Q-1zN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x4E-uz-5Ul" secondAttribute="trailing" constant="8" id="Azp-3I-dHD"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R4u-wg-yfP" secondAttribute="bottom" constant="28" id="Cya-jT-ICg"/>
                             <constraint firstItem="DEN-4m-VUG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-30" id="D43-RL-yxp"/>
-                            <constraint firstItem="mcU-qe-dgE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KBU-D6-Zf8"/>
+                            <constraint firstItem="j41-xX-vuM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ear-5Z-uKC"/>
+                            <constraint firstItem="nt9-4H-3Ep" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="IIE-ge-wLr"/>
                             <constraint firstItem="vP2-FA-GYe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="30" id="KnS-hJ-q7f"/>
-                            <constraint firstItem="mcU-qe-dgE" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" multiplier="2:4" id="Lzx-JX-ecj"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vP2-FA-GYe" secondAttribute="bottom" constant="28" id="R3H-PT-GHi"/>
-                            <constraint firstItem="Sja-ak-fKy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aTa-7u-EPr"/>
-                            <constraint firstItem="ZkK-Ua-h45" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dIG-Ce-k88"/>
-                            <constraint firstItem="mcU-qe-dgE" firstAttribute="top" secondItem="ZkK-Ua-h45" secondAttribute="bottom" constant="40" id="eu5-1p-dM8"/>
+                            <constraint firstItem="j41-xX-vuM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="VUf-DS-z3m"/>
+                            <constraint firstItem="2WL-Mk-rcc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YQM-eh-DAW"/>
+                            <constraint firstItem="x4E-uz-5Ul" firstAttribute="centerY" secondItem="6QE-Sr-sJK" secondAttribute="centerY" id="bRt-1e-m37"/>
+                            <constraint firstItem="iLL-9M-osX" firstAttribute="centerY" secondItem="nt9-4H-3Ep" secondAttribute="centerY" id="c4A-tY-dnI"/>
+                            <constraint firstItem="dBR-nE-VcA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gFw-na-gEI"/>
+                            <constraint firstItem="6QE-Sr-sJK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="jLM-3e-Vpb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2WL-Mk-rcc" secondAttribute="trailing" id="jaF-GG-ey5"/>
+                            <constraint firstItem="vP2-FA-GYe" firstAttribute="top" secondItem="dBR-nE-VcA" secondAttribute="bottom" constant="149" placeholder="YES" id="mwn-mu-7S2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iLL-9M-osX" secondAttribute="trailing" constant="8" id="nSr-Eo-zCi"/>
                             <constraint firstItem="R4u-wg-yfP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-30" id="nxp-H8-WNu"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="coolDownButton" destination="Sja-ak-fKy" id="vNH-0Q-a7y"/>
-                        <outlet property="highIntensityButton" destination="mcU-qe-dgE" id="CQY-cp-76U"/>
-                        <outlet property="warmUpButton" destination="ZkK-Ua-h45" id="GF3-oY-ick"/>
+                        <outlet property="crossfadeSeconds" destination="x4E-uz-5Ul" id="HXg-6v-3A6"/>
+                        <outlet property="fadeInSwitch" destination="iLL-9M-osX" id="Sof-Jz-obs"/>
+                        <outlet property="stationContainer" destination="dBR-nE-VcA" id="9Dg-VO-bHG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1" y="27"/>
         </scene>
     </scenes>
     <resources>

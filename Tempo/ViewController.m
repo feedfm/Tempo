@@ -7,13 +7,13 @@
 //
 
 #import "ViewController.h"
-#import <FeedMedia/FeedMediaUI.h>
+#import <FeedMedia/FeedMedia.h>
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet FMPlayPauseButton *warmUpButton;
-@property (weak, nonatomic) IBOutlet FMPlayPauseButton *highIntensityButton;
-@property (weak, nonatomic) IBOutlet FMPlayPauseButton *coolDownButton;
+@property (weak, nonatomic) IBOutlet UIStackView *stationContainer;
+@property (weak, nonatomic) IBOutlet UITextField *crossfadeSeconds;
+@property (weak, nonatomic) IBOutlet UISwitch *fadeInSwitch;
 
 @end
 
@@ -22,6 +22,41 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    FMAudioPlayer *player = [FMAudioPlayer sharedPlayer];
+    [player whenAvailable:^{
+        NSLog(@"available!");
+        
+        player.disableSongStartNotifications = YES;
+        
+        player.crossfadeInEnabled = YES;
+        [_fadeInSwitch setOn:player.crossfadeInEnabled];
+
+        player.secondsOfCrossfade = 6.0;
+        _crossfadeSeconds.text = [NSString stringWithFormat:@"%.1f", player.secondsOfCrossfade];
+        
+        for (FMStation *station in player.stationList) {
+            FMPlayPauseButton *button = [[FMPlayPauseButton alloc] init];
+            button.station = station;
+            button.crossfade = YES;
+            
+            [button setTitle:station.name forState:UIControlStateNormal];
+            [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+
+            [button setTitleColor:button.tintColor forState:UIControlStateSelected];
+            
+            [_stationContainer addArrangedSubview:button];
+        }
+        
+    } notAvailable:^{
+        // nada
+    }];
+    
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:_crossfadeSeconds action:@selector(resignFirstResponder)];
+    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44)];
+    toolbar.items = [NSArray arrayWithObject:barButton];
+    
+    _crossfadeSeconds.inputAccessoryView = toolbar;
+/*
     // copy the text shown in non-highlighted button configs to the highlighted config
     [_warmUpButton setTitle:[_warmUpButton titleForState:UIControlStateNormal]
                    forState:UIControlStateNormal | UIControlStateHighlighted];
@@ -37,47 +72,32 @@
                    forState:UIControlStateNormal | UIControlStateHighlighted];
     [_coolDownButton setTitle:[_coolDownButton titleForState:UIControlStateSelected]
                    forState:UIControlStateSelected | UIControlStateHighlighted];
-
-    [self updateButtonStates];
+*/
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stationChanged:) name:FMAudioPlayerActiveStationDidChangeNotification object:[FMAudioPlayer sharedPlayer]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)stationChanged:(NSNotification *) notification {
-    [self updateButtonStates];
-}
-
-- (void)updateButtonStates {
+- (IBAction)crossfadeTimeShouldChange:(id)sender {
     FMAudioPlayer *player = [FMAudioPlayer sharedPlayer];
+
+    player.secondsOfCrossfade = [_crossfadeSeconds.text floatValue];
     
-    if (_warmUpButton.station && (_warmUpButton.station == player.activeStation)) {
-        _warmUpButton.highlighted = YES;
-    } else {
-        _warmUpButton.highlighted = NO;
-    }
+    NSLog(@"crossfade seconds set to %f", player.secondsOfCrossfade);
+}
 
-    if (_highIntensityButton.station && (_highIntensityButton.station == player.activeStation)) {
-        _highIntensityButton.highlighted = YES;
-    } else {
-        _highIntensityButton.highlighted = NO;
-    }
+- (IBAction)fadeInShouldChange:(id)sender {
+    FMAudioPlayer *player = [FMAudioPlayer sharedPlayer];
 
-    if (_coolDownButton.station && (_coolDownButton.station == player.activeStation)) {
-        _coolDownButton.highlighted = YES;
-    } else {
-        _coolDownButton.highlighted = NO;
-    }
-
+    player.crossfadeInEnabled = [_fadeInSwitch isOn];
+    
+    NSLog(@"crossfade in set to %u", player.crossfadeInEnabled);
 }
 
 @end

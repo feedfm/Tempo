@@ -1,1 +1,1 @@
-../../../FeedMedia/UI/FMSkipButton.h
+../../../../../iOS-SDK-Core/FeedMedia/Sources/FMSkipButton.h

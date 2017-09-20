@@ -1,1 +1,1 @@
-../../../FeedMedia/Core/CWStatusBarNotification.h
+../../../../../iOS-SDK-Core/FeedMedia/Core/CWStatusBarNotification.h

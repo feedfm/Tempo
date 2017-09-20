@@ -1,1 +1,1 @@
-../../../FeedMedia/UI/FMStationButton.h
+../../../../../iOS-SDK-Core/FeedMedia/Sources/FMStationButton.h

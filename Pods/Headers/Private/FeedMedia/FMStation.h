@@ -1,1 +1,1 @@
-../../../FeedMedia/Core/FMStation.h
+../../../../../iOS-SDK-Core/FeedMedia/Core/FMStation.h

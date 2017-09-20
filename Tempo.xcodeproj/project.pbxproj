@@ -238,7 +238,7 @@
 					A99CA7DE1E455D7F0093FE4C = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = PAGEPFEF9A;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -516,6 +516,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fm.feed.FeedTempo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bf1fb24c-8621-4927-be82-4090d91e664d";
+				PROVISIONING_PROFILE_SPECIFIER = "Tempo App";
 			};
 			name = Debug;
 		};
@@ -530,6 +532,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = fm.feed.FeedTempo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bf1fb24c-8621-4927-be82-4090d91e664d";
+				PROVISIONING_PROFILE_SPECIFIER = "Tempo App";
 			};
 			name = Release;
 		};

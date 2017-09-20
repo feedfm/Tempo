@@ -19,16 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     FMLogSetLevel(FMLogLevelDebug);
     
-    [FMAudioPlayer setClientToken:@"90f50229cfb2afb166bde2066bbce0b37baefbab" secret:@"1e920462eb3412bcb1dc036fc57aa64f03f3d50f"];
-    
-    FMAudioPlayer *player = [FMAudioPlayer sharedPlayer];
-    [player whenAvailable:^{
-        player.crossfadeInEnabled = YES;
-        player.secondsOfCrossfade = 6.0;
-        
-    } notAvailable:^{
-        // nada
-    }];
+    [FMAudioPlayer setClientToken:@"86b7e0832777e079716f921ef577bd1ca0fc5f31" secret:@"fa10a06be0fddf7039edbb53b4b5f3b04a43767c"];
     
     return YES;
 }

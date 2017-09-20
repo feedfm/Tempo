@@ -1,1 +1,1 @@
-../../../FeedMedia/UI/FMActivityIndicator.h
+../../../../../iOS-SDK-Core/FeedMedia/Sources/FMActivityIndicator.h

@@ -1,1 +1,1 @@
-../../../FeedMedia/Core/FMAudioPlayer.h
+../../../../../iOS-SDK-Core/FeedMedia/Core/FMAudioPlayer.h

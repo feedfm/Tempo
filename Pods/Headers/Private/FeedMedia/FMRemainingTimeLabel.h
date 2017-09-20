@@ -1,1 +1,1 @@
-../../../FeedMedia/UI/FMRemainingTimeLabel.h
+../../../../../iOS-SDK-Core/FeedMedia/Sources/FMRemainingTimeLabel.h
