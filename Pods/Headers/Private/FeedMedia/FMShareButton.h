@@ -1,1 +1,1 @@
-../../../../../iOS-SDK-Core/FeedMedia/Sources/FMShareButton.h
+../../../FeedMedia/Sources/FMShareButton.h
